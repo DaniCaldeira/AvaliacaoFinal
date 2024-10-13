@@ -21,23 +21,21 @@ export default function FormCadastroCandidato() {
   function handleSubmit(data) {
     data.preventDefault();
 
-    console.log(formData);
-
-    // cadastro(formData)
-    //   .then((resposta) => {
-    //     console.log("Resposta - ", resposta);
-    //     if (resposta.message === "Usuário cadastrado com sucesso") {
-    //       setAlert({ status: "success", message: resposta.message });
-    //       navigate("/login");
-    //     } else {
-    //       setAlert({ status: "danger", message: "Erro ao cadastrar usuário" });
-    //       console.log(resposta);
-    //     }
-    //   })
-    //   .catch((erro) => {
-    //     console.log(erro.message);
-    //     setAlert({ status: "danger", message: erro.message });
-    //   });
+    cadastro(formData)
+      .then((resposta) => {
+        console.log("Resposta - ", resposta);
+        if (resposta.message === "Usuário cadastrado com sucesso") {
+          setAlert({ status: "success", message: resposta.message });
+          navigate("/login");
+        } else {
+          setAlert({ status: "danger", message: "Erro ao cadastrar usuário" });
+          console.log(resposta);
+        }
+      })
+      .catch((erro) => {
+        console.log(erro.message);
+        setAlert({ status: "danger", message: erro.message });
+      });
   }
 
   const handleChange = (data) => {
