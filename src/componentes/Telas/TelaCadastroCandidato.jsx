@@ -1,13 +1,13 @@
-import Cabecalho from "../Templates/Cabecalho";
-import Rodape from "../Templates/Rodape";
 import FormCadastroCandidato from "../Formularios/FormCadastroCandidato";
+import Rodape from "../Templates/Rodape";
 
 export default function TelaCadastroCandidato() {
   return (
-    <div>
-      <Cabecalho />
-      <FormCadastroCandidato />
+    <>
+      <main className="pt-5">
+        <FormCadastroCandidato />
+      </main>
       <Rodape />
-    </div>
+    </>
   );
 }

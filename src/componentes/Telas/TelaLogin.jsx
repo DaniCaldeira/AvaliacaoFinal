@@ -3,9 +3,11 @@ import FormLogin from "../Formularios/FormLogin";
 
 export default function TelaLogin() {
   return (
-    <div>
-      <FormLogin />
+    <>
+      <main className="pt-5">
+        <FormLogin />
+      </main>
       <Rodape />
-    </div>
+    </>
   );
 }
